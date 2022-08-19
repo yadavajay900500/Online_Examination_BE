@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 const Mongoose = require("mongoose");
 const { UserStartExam } = require("./Controllers/onlineExam.controller");
-const startExam = require('./Routes/startExam.route')
+const onlineExam = require('./Routes/startExam.route')
 const api_version = "api/v1";
+
+
 
 // initilization of all configuration
 (() => {
@@ -32,8 +34,10 @@ function body_parsar() {
 }
 
 function routes_config(){
-    app.use('/', startExam);
+    app.use('/', onlineExam);
 }
+
+
 
 function global_Error_Handler() {
   app.use((err, req, res, next) => {

@@ -1,9 +1,17 @@
 {
   "dependencies": {
+    "date-and-time": "^2.4.1",
     "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "local-storage": "^2.0.0",
+    "luxon": "^3.0.1",
     "mongodb": "^4.8.1",
     "mongoose": "^6.5.1",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "sessionstorage": "^0.1.0",
+    "ws": "^8.8.1"
   },
   "scripts": {
     "start": "nodemon main.js"
@@ -11,7 +19,6 @@
   "name": "online_exam",
   "version": "1.0.0",
   "main": "main.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC",
   "description": ""

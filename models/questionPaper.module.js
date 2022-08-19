@@ -1,10 +1,9 @@
 const Mongoose = require('mongoose');
 
 const paper_schema = new Mongoose.Schema({
- 
+    qusNumber:Number,
     question: String,
-
-    option: {
+     option: {
         type: Array
     },
     rightAns:String,

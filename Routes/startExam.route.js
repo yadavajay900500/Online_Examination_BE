@@ -1,10 +1,9 @@
 const { setQuestion ,userStartExam,userAns,checkThePaper,registrationForm,postTime,getAllQuestion,deleteSomeQuestion} = require('../Controllers/onlineExam.controller');
 const questionModel = require('../models/questionPaper.module');
-//const { result_validator } = require('../Registration/Middleware/questionPaper.middleware');
 const {registrationSchema}=require('../Validations/questionPaper.validator')
 const {result_validator}=require('../Middlewares/globalValidatior.middleware')
 const onlineExam= require('express').Router();
-//const {option_validator}=require('../Helper/validator.helper')
+
 
 
 
@@ -25,8 +24,7 @@ function post_requests() {
 
 
 function get_requests() {
-    onlineExam.get('/start',userStartExam );
-    onlineExam.get('/getQuestion',getAllQuestion );
+    onlineExam.get('/getAllQuestion',userStartExam );
     onlineExam.get('/checkPaper',checkThePaper)
 }
 function delete_request(){
